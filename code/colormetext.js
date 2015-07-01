@@ -7,12 +7,18 @@ function colorer(){
 	//simplepython.returnColors(input, function(response){
     //	$('#output').html(response);  
   	//});
-	
+	alert('Im going to start processing');
 	$.ajax({
 	  type: "POST",
-	  crossDomain : true,
+	  //crossDomain : true,
 	  url: "simplepython.py",
-	  data: { param: input}
+	  //data: { param: input}
+	  data: {'key':'value','key2':'value2'},
+	  success: function(response){
+                            alert(response.message);
+                            alert(response.keys);
+                           }
+                           
 	}).done(function( o ) {
 		var words = input.split(" ");
 		var colors = o;
