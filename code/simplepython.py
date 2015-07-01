@@ -10,7 +10,7 @@
 #def returnColors(text):
 #    return ["blue", "green"]
 
-import sys
+import sys, string
 import json
 import cgi
 
@@ -31,7 +31,7 @@ result['keys'] = ",".join(fs.keys())
 d = {}
 for k in fs.keys():
     d[k] = fs.getvalue(k)
-result['message'] = d['param']
+result['message'] = d['param'].upper()
 result['data'] = d
 
 sys.stdout.write(json.dumps(result,indent=1))
