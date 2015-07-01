@@ -14,7 +14,7 @@ import sys, string
 import json
 import cgi
 #from annotator import SentimentAnnotator
-#from colorPicker import colorPicker
+from colorPicker import colorPicker
 
 # def colorPicker(scores):
 # 	colors = []
@@ -59,8 +59,7 @@ d = {}
 for k in fs.keys():
     d[k] = fs.getvalue(k)
 #result['message'] = myAnnotator.annotate(d['param'], "anything"))
-result['message'] = d['param'].upper() 
-#join(",").(colorPicker([4, 6]))
+result['message'] = join(",").(colorPicker([4, 6]))
 #d['param'].upper() 
 
 
