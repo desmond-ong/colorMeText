@@ -63,6 +63,14 @@ body {
 
   }
 
+textarea {
+   font-size: 12px;
+   font-family: courier;
+   height: 400px;
+   width: 400px;
+   padding: 0 px;
+} 
+
   .labels {
   	font-family: courier, sans;
   	font-size: 18px;
@@ -71,10 +79,11 @@ body {
   }
 
   #output {
-  	font-family: sans;
+  	font-family: courier;
   	font-size: 12px;
   	vertical-align: top;
   }
+
   div.main {
     width: 800px;
     margin: auto;

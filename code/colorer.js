@@ -15,10 +15,10 @@ function colorer(txt,colors){
 	}
 
 	var newTxt = colorWords(words,colors);
-
+	var newTxtString = "";
 	for (var i=0; i<newTxt.length; i++) {
-		document.write(newTxt[i]);
+		newTxtString + newTxt[i];
 	}
-
+	return nexTxtString;
 }
 

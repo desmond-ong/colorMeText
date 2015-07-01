@@ -12,26 +12,34 @@
 <body>
 	<p class="title"> Color-Me-Text </p>
 	<div class="main">
-		<div class="slide" id="inputSlide">
-		<table border="0">
-			<tr><td><p class="labels"> Input </p></td></tr>
+		<p>Pick a dictionary:
+		<select id="dictionary">
+  			<option value="polarity">Polarity</option>
+  			<option value="arousal">Arousal</option>
+  			<option value="concreteness">Concreteness</option>
+		</select>
+	</p>
+		<table border="0" width="800px">
+			<tr>
+				<td width="50%"><p class="labels"> Input text </p></td>
+				<td width="50%"><p class="labels"> Annotated text</p></td>
+			</tr>
 			<tr><td>
 				<form name="text">
- 				<textarea rows="30" cols="60" id="input" form="text">Please enter some text.</textarea>
+ 				<textarea id="input" form="text">Hello world</textarea>
  				</form>
- 			</td></tr>
- 	</table>
-	<button type="button" id="submit" onclick="this.blur(); {reverse();}">Submit</button>
-	</div>
-
-	<div class="slide" id="outputSlide">
-		<table border="0">
-			<tr><td><p class="labels"> Output </p></td></tr>
-			<tr><td align="top"><span id="output">{{}}</span></td></tr>
+ 			</td>
+ 			<td valign="top"><table style="border:1px solid gray;" cellpadding="0" width="400px" height="400px"><tr><td valign="top">
+ 				<p id="output"></p>
+ 			</tr></td>
+ 			</table>
+ 			</td>
+ 			</tr>
+ 			<tr>
+ 				<td align="right"><button type="button" id="submit" onclick="this.blur(); colorer();">Submit</button></td>
+ 			</tr>
 		</table>
-	<button type="button" id="submit" onclick="this.blur(); {reverse();}">Submit</button>
 
-	</div>
 </div>
 </body>
 <script src="colormetext.js"></script>
