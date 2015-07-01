@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Color-Me-Text</title>
+<script src="https://www.stanford.edu/~dco/common/jquery.min.js"></script>
+<script src="https://www.stanford.edu/~dco/common/mmturkey.0.5.js?nowarn"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style.css" />
+<link type="text/css" rel="stylesheet" href="sliders/jquery-ui.css" /></p>
+</head>
+
+<body>
+	<p class="title"> Color-Me-Text </p>
+	<div class="main">
+		<div class="slide" id="inputSlide">
+		<table border="0">
+			<tr><td><p class="labels"> Input </p></td></tr>
+			<tr><td>
+				<form name="text">
+ 				<textarea rows="30" cols="60" id="input" form="text">Please enter some text.</textarea>
+ 				</form>
+ 			</td></tr>
+ 	</table>
+	<button type="button" id="submit" onclick="this.blur(); {reverse();}">Submit</button>
+	</div>
+
+	<div class="slide" id="outputSlide">
+		<table border="0">
+			<tr><td><p class="labels"> Output </p></td></tr>
+			<tr><td align="top"><span id="output">{{}}</span></td></tr>
+		</table>
+	<button type="button" id="submit" onclick="this.blur(); {reverse();}">Submit</button>
+
+	</div>
+</div>
+</body>
+<script src="colormetext.js"></script>
+</html>

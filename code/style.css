@@ -1,0 +1,101 @@
+body {
+    background-image: url("seamless_paper_texture.png");
+    background-color: #cccccc;
+    background: #efeee6;
+    
+}
+  .invisible {
+    text-decoration: none;
+    cursor: default;
+    color: white;
+    font-size: 1px;
+    display: none
+  }
+
+  body {
+    background-image: url("seamless_paper_texture.png");
+    
+    margin: 25px;
+    padding: 5px;
+    font-family: verdana, Palatino,"Palatino Linotype",Georgia,"Times New Roman",Times,serif;
+    line-height:160%;
+    font-size: 16px;
+  }
+ 
+  .content {
+    background: #fff;
+    color: #fc3;
+    padding: 10px;
+    margin: 0px;
+    border-color: #a00;
+    border-style: solid;
+    border-width: 0 0px 0px 0px;
+  }
+  .contentbox {
+    background: #fff;
+    color: #000;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  a, a:visited {
+    color: dimgray;
+  }
+  a:active, a:hover {
+    color: darkred;
+  }
+  .footer {
+    text-align: center;
+    margin: 10px 40px 10px 40px;
+    padding: 5px;
+    border: 2px solid #aaa;
+    background: #fff;
+  }
+
+  .item {
+    padding: 5px 0;
+  }
+
+  .title {
+  	font-family: 'Special Elite', courier, sans;
+  	font-size: 30px;
+  	text-align: center;
+
+  }
+
+  .labels {
+  	font-family: courier, sans;
+  	font-size: 18px;
+  	vertical-align: top;
+  	text-align: center;
+  }
+
+  #output {
+  	font-family: sans;
+  	font-size: 12px;
+  	vertical-align: top;
+  }
+  div.main {
+    width: 800px;
+    margin: auto;
+    top: 20px;
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid #cbb191;
+}
+  div.nav-bar {
+    width: 800px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border: 1px solid #cbb191;
+}
