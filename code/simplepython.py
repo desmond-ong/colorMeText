@@ -39,7 +39,7 @@ def colorPicker(scores):
 			colors.append("mediumblue")
 		elif score <= 9 and score >= 8:
 			colors.append("darkblue")
-	return color
+	return colors
 
 #myAnnotator = SentimentAnnotator()
 
