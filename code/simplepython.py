@@ -26,13 +26,12 @@ sys.stdout.write("\n")
 
 result = {}
 result['success'] = True
-result['message'] = fs.param
 result['keys'] = ",".join(fs.keys())
 
 d = {}
 for k in fs.keys():
     d[k] = fs.getvalue(k)
-
+result['message'] = d['param']
 result['data'] = d
 
 sys.stdout.write(json.dumps(result,indent=1))
