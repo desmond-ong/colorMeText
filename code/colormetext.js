@@ -3,11 +3,11 @@
 function colorer(){
 	//	  var dictionary = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
-	pico.load("simplepython");
-	simplepython.returnColors(input, function(response){
-    	$('#output').html(response);  
-  	});
-	/*
+	//pico.load("simplepython");
+	//simplepython.returnColors(input, function(response){
+    //	$('#output').html(response);  
+  	//});
+	
 	$.ajax({
 	  type: "POST",
 	  crossDomain : true,
@@ -23,7 +23,7 @@ function colorer(){
 		}
 		$("#output").html(o);
 	});
-*/
+
 
 }
 
