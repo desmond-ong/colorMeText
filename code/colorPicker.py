@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # 8 - 9 = dark blue		"darkblue"
 # 7 - 8 = blue			"mediumblue"
 # 6 - 7 = medium blue		"blue"

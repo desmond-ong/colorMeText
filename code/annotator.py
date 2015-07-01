@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # Sentiment Functions
 import pickle
 
