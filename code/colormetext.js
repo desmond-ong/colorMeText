@@ -17,6 +17,7 @@ function colorer(){
 	  success: function(response){
         alert(response.message);
         //alert(response.keys);
+        /*
         var words = response.message.split(" ");
 		//var colors = o;
 		var colors = ["blue", "green"];
@@ -25,6 +26,7 @@ function colorer(){
 			coloredWords = coloredWords + '<span style="color:' + colors[i] + '">' + words[i] + ' ' + '</span>';
 		}
 		$("#output").html(coloredWords);
+		*/
        }
    });
 

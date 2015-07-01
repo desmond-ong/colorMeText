@@ -35,7 +35,7 @@ result['keys'] = ",".join(fs.keys())
 d = {}
 for k in fs.keys():
     d[k] = fs.getvalue(k)
-result['message'] = colorPicker(myAnnotator.annotate(d['param'], "anything")))
+result['message'] = myAnnotator.annotate(d['param'], "anything"))
 
 
 result['data'] = d
