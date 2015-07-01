@@ -39,7 +39,7 @@ import cgi
 # 			colors.append("darkblue")
 # 	return colors
 
-myAnnotator = SentimentAnnotator()
+#myAnnotator = SentimentAnnotator()
 
 fs = cgi.FieldStorage()
 
