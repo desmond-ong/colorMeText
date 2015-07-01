@@ -104,7 +104,7 @@ d = {}
 for k in fs.keys():
     d[k] = fs.getvalue(k)
 
-result['message'] = len(myAnnotator.annotate(d['param'], "anything"))
+result['message'] = ",".join(myAnnotator.annotate(d['param'], "anything"))
 #result['message'] = d['param']
 #result['message'] = len(colorPicker([4, 6]))
 #d['param'].upper() 
