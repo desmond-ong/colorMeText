@@ -21,8 +21,13 @@ class SentimentAnnotator():
 		else:
 			return 0
 
-	def annotate(self, word):
-		return self.annotateDiscrete(word)
+	def annotate(self, sentence, model="Liu"):
+		words = sentence.split()
+		if model=="Liu":
+			values = [self.annotateDiscrete(word) for word in words]
+		else:
+			values = [self.annotateContinuous(word) for word in words]
+		return values
 
 	def annotateSentence(self, sentence):
 		return 0
