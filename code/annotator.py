@@ -10,9 +10,9 @@ class SentimentAnnotator():
 
 	def annotateDiscreteLiu(self, word):
 		if word in self.bingliu_pos:
-			return 9
+			return 6
 		elif word in self.bingliu_neg:
-			return 1
+			return 4
 		else:
 			return 0
 
