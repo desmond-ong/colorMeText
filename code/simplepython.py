@@ -16,28 +16,28 @@ import cgi
 #from annotator import SentimentAnnotator
 #from colorPicker import colorPicker
 
-def colorPicker(scores):
-	colors = []
-	for score in scores:
-		if score == 0 or score == 5:
-			colors.append("gray")
-		elif score < 5 and score > 4:
-			colors.append("#FF5050")
-		elif score <= 4 and score > 3:
-			colors.append("red")
-		elif score <= 3 and score > 2:
-			colors.append("mediumred")
-		elif score <= 2 and score >= 1:
-			colors.append("darkred")
-		elif score < 5 and score > 6:
-			colors.append("#3366FF")
-		elif score <= 6 and score > 7:
-			colors.append("blue")
-		elif score <= 7 and score > 8:
-			colors.append("mediumblue")
-		elif score <= 8 and score >= 9:
-			colors.append("darkblue")
-	return colors
+# def colorPicker(scores):
+# 	colors = []
+# 	for score in scores:
+# 		if score == 0 or score == 5:
+# 			colors.append("gray")
+# 		elif score < 5 and score > 4:
+# 			colors.append("#FF5050")
+# 		elif score <= 4 and score > 3:
+# 			colors.append("red")
+# 		elif score <= 3 and score > 2:
+# 			colors.append("mediumred")
+# 		elif score <= 2 and score >= 1:
+# 			colors.append("darkred")
+# 		elif score < 5 and score > 6:
+# 			colors.append("#3366FF")
+# 		elif score <= 6 and score > 7:
+# 			colors.append("blue")
+# 		elif score <= 7 and score > 8:
+# 			colors.append("mediumblue")
+# 		elif score <= 8 and score >= 9:
+# 			colors.append("darkblue")
+# 	return colors
 
 myAnnotator = SentimentAnnotator()
 
