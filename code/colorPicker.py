@@ -25,7 +25,7 @@ def colorPicker(scores):
 			colors.append("darkred")
 		elif score < 6 and score > 5:
 			colors.append("#3366FF")
-		elif score <= 7 and score > 6:
+		elif score <= 7 and score >= 6:
 			colors.append("blue")
 		elif score <= 8 and score > 7:
 			colors.append("mediumblue")
