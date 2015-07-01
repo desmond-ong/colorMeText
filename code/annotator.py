@@ -10,21 +10,21 @@ class SentimentAnnotator():
 
 	def annotateDiscreteLiu(self, word):
 		if word in self.bingliu_pos:
-			return "pos"
+			return 9
 		elif word in self.bingliu_neg:
-			return "neg"
+			return 1
 		else:
-			return "neu"
+			return 0
 
 	def annotateWarriner(self, word):
 		if word in self.warriner:
-			return self.warriner[word]-4.5
+			return self.warriner[word]
 		else:
 			return 0
 
 	def annotateAnew(self, word):
 		if word in self.anew:
-			return self.anew[word]-4.5
+			return self.anew[word]
 		else:
 			return 0
 
