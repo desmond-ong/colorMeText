@@ -24,7 +24,7 @@ sys.stdout.write("\n")
 
 result = {}
 result['success'] = True
-result['message'] = "The command Completed Successfully"
+result['message'] = fs.param
 result['keys'] = ",".join(fs.keys())
 
 d = {}
