@@ -1,15 +1,30 @@
 
+
 function colorer(){
+	//	  var dictionary = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
-	var dictionary = document.getElementById("dictionary").value;
-	var words = input.split(" ");
-	var colors = ["blue", "green"];
-	var coloredWords = "";	
-	for (var i=0; i<words.length; i++) {
-		coloredWords = coloredWords + '<span style="color:' + colors[i] + '">' + words[i] + ' ' + '</span>';
-	}
-	
-	$("#output").html(coloredWords);
+	pico.load("simplepython");
+	simplepython.returnColors(input, function(response){
+    	$('#output').html(response);  
+  	});
+	/*
+	$.ajax({
+	  type: "POST",
+	  crossDomain : true,
+	  url: "simplepython.py",
+	  data: { param: input}
+	}).done(function( o ) {
+		var words = input.split(" ");
+		var colors = o;
+		//var colors = ["blue", "green"];
+		var coloredWords = "";	
+		for (var i=0; i<words.length; i++) {
+			coloredWords = coloredWords + '<span style="color:' + colors[i] + '">' + words[i] + ' ' + '</span>';
+		}
+		$("#output").html(o);
+	});
+*/
+
 }
 
 
