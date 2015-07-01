@@ -12,7 +12,7 @@ function colorer(){
 	  type: "POST",
 	  //crossDomain : true,
 	  url: "simplepython.py",
-	  data: { param: input}
+	  data: { param: input},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
                             alert(response.message);
