@@ -1,6 +1,6 @@
 import sys, re, string
 
-f = open("../Materials/inquireraugmented.csv", "r")
+f = open("inquireraugmented.csv", "r")
 tag = sys.argv[1]
 
 linenum = 0

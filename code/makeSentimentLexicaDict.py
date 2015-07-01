@@ -12,7 +12,17 @@ allStrings = f.readline()
 anew_dict = {} # dictionary that just links word to mean valence
 for line in allStrings.split():
 	thisLine = line.split(",")
-	anew_dict[thisLine[0]] = thisLine[1]
+	anew_dict[thisLine[0]] = float(thisLine[1])
 f.close()
-
 pickle.dump(anew_dict, open("../pickledData/anew.p", "wb"))
+
+
+f = open('../lexicons/Warriner_et_al_emot_ratings_parsed.csv', 'r')
+allStrings = f.readline()
+anew_dict = {} # dictionary that just links word to mean valence
+for line in allStrings.split():
+	thisLine = line.split(",")
+	if len(thisLine)>1:
+		anew_dict[thisLine[0]] = float(thisLine[1])
+f.close()
+pickle.dump(anew_dict, open("../pickledData/warriner.p", "wb"))
