@@ -26,13 +26,13 @@ function colorer(){
 	  success: function(response){
         	alert(response.message);
         //alert(response.keys);
-        var lineBreakIndices = findAllIndices(input, '\n');
+        var lineBreakIndices = findAllIndices(input, "\n");
         var words = input.split(" ");
 		//var colors = o;
 		var colors = response.colors;
 		var coloredWords = [];	
 		for (var i=0; i<words.length; i++) {
-			coloredWords[i] = '<span style="color:' + colors[i] + '">' + words[i] + ' ' + '</span>';
+			coloredWords[i] = '<span style="color:' + colors[i] + '">' + words[i] + '</span>';
 		}
 		for (var i=0; i < lineBreakIndices.length; i++) {
 			var thisIndex = lineBreakIndices[i];
@@ -40,9 +40,9 @@ function colorer(){
 		}
 		var coloredStr = "";
 		for (var i=0; i<coloredWords.length; i++) {
-			coloredStr = coloredStr + coloredWords[i];
+			coloredStr = coloredStr + " " + coloredWords[i];
 		}
-		$("#output").html(coloredStr);
+		$("#output").html(lineBreakIndices);
 		
        }
    });
