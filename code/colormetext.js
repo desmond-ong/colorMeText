@@ -17,18 +17,6 @@ String.prototype.insert = function (index, string) {
 };
 */
 
-function CalculateHEX()
-		{
-			alert('HEX');
-			var rgbCode ="#";
-			for(var c = 0;c< 3;c++)
-			{
-				var y = Math.floor((Math.random() * 255) + 1);
-				rgbCode  = rgbCode + Number(y).toString(16);
-			}
-			return rgbCode;
-
-		}
 
 function colorer(){
 	var option = document.getElementById("dictionary").value;
@@ -73,7 +61,7 @@ function colorer(){
 			for(var j=1;j<=6;j++)
 			{
 				var txPoint = xPoint * j;  
-				var colorcode = CalculateHEX();
+				var colorcode = "red";
 
 
 				ctx.beginPath();
