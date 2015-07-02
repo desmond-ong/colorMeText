@@ -121,7 +121,7 @@ result['message'] = ",".join(colorPicker(numberValues))
 
 
 forMean = [5 if x==0 else x for x in numberValues]
-result['mean'] = sum(forMean)/len(forMean)
+result['mean'] = (((sum(forMean)/len(forMean))-5)/4)
 
 result['colors'] = colorPicker(numberValues)
 
