@@ -63,7 +63,7 @@ function colorer(){
 			var colorCode = colors[i];
 
 				ctx.beginPath();
-				ctx.fillStyle = colorcode ;      
+				ctx.fillStyle = colorCode;      
 				ctx.rect(20, 20, txPoint , tyPoint );
 				ctx.fill();
 				ctx.stroke();
