@@ -113,13 +113,17 @@ d = {}
 for k in fs.keys():
     d[k] = fs.getvalue(k)
 
-result['message'] = ",".join(colorPicker(myAnnotator.annotate(d['param'], d['lexicon'])))
+numberValues = myAnnotator.annotate(d['param'], d['lexicon'])
+result['message'] = ",".join(colorPicker(numberValues))
 #result['message'] = d['param']
 #result['message'] = len(colorPicker([4, 6]))
 #d['param'].upper() 
 
 
-result['colors'] = colorPicker(myAnnotator.annotate(d['param'], d['lexicon']))
+forMean = [5 if x==0 else x for x in numberValues]
+result['mean'] = sum(forMean)/len(forMean)
+
+result['colors'] = colorPicker(numberValues)
 
 sys.stdout.write(json.dumps(result,indent=1))
 sys.stdout.write("\n")
