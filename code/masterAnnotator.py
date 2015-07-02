@@ -87,8 +87,6 @@ def colorPicker(scores):
 
 myAnnotator = SentimentAnnotator()
 
-
-
 sys.stdout.write("Content-Type: application/json")
 
 sys.stdout.write("\n")
