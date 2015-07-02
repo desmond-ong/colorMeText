@@ -11,7 +11,7 @@ function colorer(){
 	$.ajax({
 	  type: "POST",
 	  //crossDomain : true,
-	  url: "simplepython.py",
+	  url: "code/simplepython.py",
 	  data: { param: input, lexicon: option},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
