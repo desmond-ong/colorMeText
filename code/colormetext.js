@@ -26,7 +26,7 @@ function colorer(){
 	  success: function(response){
         	alert(response.message);
         //alert(response.keys);
-        var lineBreakIndices = findAllIndices(input, "\n");
+        var lineBreakIndices = findAllIndices(input, "h");
         var words = input.split(" ");
 		//var colors = o;
 		var colors = response.colors;
