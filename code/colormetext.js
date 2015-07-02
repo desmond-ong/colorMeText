@@ -16,6 +16,20 @@ String.prototype.insert = function (index, string) {
     return string + this;
 };
 */
+
+function CalculateHEX()
+		{
+			alert('HEX');
+			var rgbCode ="#";
+			for(var c = 0;c< 3;c++)
+			{
+				var y = Math.floor((Math.random() * 255) + 1);
+				rgbCode  = rgbCode + Number(y).toString(16);
+			}
+			return rgbCode;
+
+		}
+
 function colorer(){
 	var option = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
@@ -31,7 +45,7 @@ function colorer(){
 	  data: { param: input, lexicon: option},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
-	  	alert(response.message);
+	  	//alert(response.message);
         //alert(response.keys);
         //var lineBreakIndices = findAllIndices(input, 'h');
         var words = input.split(" ");
@@ -72,18 +86,6 @@ function colorer(){
 
 		}
 
-		function CalculateHEX()
-		{
-			alert('HEX');
-			var rgbCode ="#";
-			for(var c = 0;c< 3;c++)
-			{
-				var y = Math.floor((Math.random() * 255) + 1);
-				rgbCode  = rgbCode + Number(y).toString(16);
-			}
-			return rgbCode;
-
-		}
 
 		/*
 
