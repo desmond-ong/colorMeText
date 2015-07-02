@@ -52,7 +52,7 @@ class SentimentAnnotator():
 
 	# scale from 1-5 to 1-9
 	def annotateConcrete(self, word):
-		if word.lower in self.concreteness:
+		if word in self.concreteness:
 			return ((self.concreteness[word]-1)*2 + 1)
 		else:
 			return 0
