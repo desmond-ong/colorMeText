@@ -25,13 +25,13 @@ function colorer(){
   	//});
 	//alert('Im going to start processing');
 	$.ajax({
-	  type: "POST",
+		type: "POST",
 	  //crossDomain : true,
 	  url: "code/masterAnnotator.py",
 	  data: { param: input, lexicon: option},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
-        	alert(response.message);
+	  	alert(response.message);
         //alert(response.keys);
         //var lineBreakIndices = findAllIndices(input, 'h');
         var words = input.split(" ");
@@ -46,6 +46,45 @@ function colorer(){
 		for (var i=0; i<coloredWords.length; i++) {
 			coloredStr = coloredStr + " " + coloredWords[i];
 		}
+		
+		var xPoint = 30;
+		var yPoint = 30;
+
+		var c  = document.getElementsByTagName('canvas')[0];
+		var ctx = c.getContext("2d");
+
+		for(var i =1; i<=6;i++)
+		{
+			var tyPoint = yPoint * i;
+			for(var j=1;j<=6;j++)
+			{
+				var txPoint = xPoint * j;  
+				var colorcode = CalculateHEX();
+
+
+				ctx.beginPath();
+				ctx.fillStyle = colorcode ;      
+				ctx.rect(20, 20, txPoint , tyPoint );
+				ctx.fill();
+				ctx.stroke();
+				ctx.closePath();
+			}
+
+		}
+
+		function CalculateHEX()
+		{
+			alert('HEX');
+			var rgbCode ="#";
+			for(var c = 0;c< 3;c++)
+			{
+				var y = Math.floor((Math.random() * 255) + 1);
+				rgbCode  = rgbCode + Number(y).toString(16);
+			}
+			return rgbCode;
+
+		}
+
 		/*
 
 		for (var i=0; i < lineBreakIndices.length; i++) {
@@ -57,16 +96,16 @@ function colorer(){
 		*/
 		$("#output").html(coloredStr);
 		
-       }
-   });
+	}
+});
 
 }
 
 
 function reverse() {
-  var o = '';
-  for (var i = input.length - 1; i >= 0; i--)
-    o += input[i];
+	var o = '';
+	for (var i = input.length - 1; i >= 0; i--)
+		o += input[i];
 	showSlide("outputSlide");
-  $("#output").html(o);
+	$("#output").html(o);
 }

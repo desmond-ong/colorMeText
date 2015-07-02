@@ -56,13 +56,13 @@ body {
 
   .title {
   	font-family: 'Special Elite', courier, sans;
-  	font-size: 30px;
+  	font-size: 40px;
   	text-align: center;
 
   }
 
 textarea {
-   font-size: 12px;
+   font-size: 14px;
    font-family: courier;
    height: 400px;
    width: 400px;
@@ -78,7 +78,7 @@ textarea {
 
   #output {
   	font-family: courier;
-  	font-size: 12px;
+  	font-size: 14px;
   	vertical-align: top;
   }
 
