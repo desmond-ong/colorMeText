@@ -40,6 +40,7 @@ var allColors = ["darkred", "#800000", "red", "#FF5050", "gray", "#3366FF", "blu
 		}
 
 function colorer(){
+	$('#progressSpan').html("Processing ...");
 	var option = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
 	//pico.load("simplepython");
@@ -85,7 +86,7 @@ function colorer(){
 		}
 		*/
 		$("#output").html(coloredStr);
-		
+		$('#progressSpan').html("Done!");
 	}
 });
 
