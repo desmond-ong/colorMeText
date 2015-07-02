@@ -36,6 +36,8 @@ function colorer(){
 	  	//alert(response.message);
         //alert(response.keys);
         //var lineBreakIndices = findAllIndices(input, 'h');
+        var meanScore = response.mean;
+        $("#score").html(meanScore);
         var words = input.split(" ");
 		//var colors = o;
 		var colors = response.colors;
