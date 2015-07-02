@@ -25,7 +25,7 @@ class SentimentAnnotator():
 		self.bingliu_pos = pickle.load(open("../pickledData/liu_pos.p", "r"))
 		self.bingliu_neg = pickle.load(open("../pickledData/liu_neg.p", "r"))
 		#self.anew = pickle.load(open("../pickledData/anew.p", "r"))
-		self.warriner = pickle.load(open("../pickledData/warriner.p", "r"))
+		self.warriner = pickle.load(open("../pickledData/warriner_valence.p", "r"))
 
 	def annotateDiscreteLiu(self, word):
 		if word in self.bingliu_pos:
