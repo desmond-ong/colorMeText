@@ -49,8 +49,15 @@ class SentimentAnnotator():
 		else:
 			return 0
 
+	def annotateConcrete(self, word):
+		self.concreteness = pickle.load(open("../pickledData/concreteness.p", "r"))
+		if word in self.concreteness:
+			return ((self.concreteness[word]-1)*2 + 1)
+		else:
+			return 0
+
 	# This is the function that should be called externally
-	def annotate(self, sentence, model="liu"):
+	def annotate(self, sentence, model="valence"):
 		words = sentence.split()
 		#if model=="polarity":
 			#values = [self.annotateDiscreteLiu(word.lower().strip()) for word in words]

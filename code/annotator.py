@@ -45,7 +45,7 @@ class SentimentAnnotator():
 			return 0
 
 	# This is the function that should be called externally
-	def annotate(self, sentence, model="liu"):
+	def annotate(self, sentence, model="valence"):
 		words = sentence.split()
 		#if model=="polarity":
 		#	values = [self.annotateDiscreteLiu(word) for word in words]
