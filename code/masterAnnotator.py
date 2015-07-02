@@ -25,7 +25,10 @@ class SentimentAnnotator():
 		self.bingliu_pos = pickle.load(open("../pickledData/liu_pos.p", "r"))
 		self.bingliu_neg = pickle.load(open("../pickledData/liu_neg.p", "r"))
 		#self.anew = pickle.load(open("../pickledData/anew.p", "r"))
-		self.warriner = pickle.load(open("../pickledData/warriner_valence.p", "r"))
+		self.warrinerValence = pickle.load(open("../pickledData/warriner_valence.p", "r"))
+		self.warrinerArousal = pickle.load(open("../pickledData/warriner_arousal.p", "r"))
+		self.concreteness = pickle.load(open("../pickledData/concreteness.p", "r"))
+
 
 	def annotateDiscreteLiu(self, word):
 		if word in self.bingliu_pos:
@@ -35,15 +38,22 @@ class SentimentAnnotator():
 		else:
 			return 0
 
-	def annotateWarriner(self, word):
-		if word in self.warriner:
-			return self.warriner[word]
+	def annotateWarrinerValence(self, word):
+		if word in self.warrinerValence:
+			return self.warrinerValence[word]
 		else:
 			return 0
 
-	def annotateAnew(self, word):
-		if word in self.anew:
-			return self.anew[word]
+	def annotateWarrinerArousal(self, word):
+		if word in self.warrinerArousal:
+			return self.warrinerArousal[word]
+		else:
+			return 0
+
+	# scale from 1-5 to 1-9
+	def annotateConcrete(self, word):
+		if word in self.concreteness:
+			return ((self.concreteness[word]-1)*2 + 1)
 		else:
 			return 0
 
@@ -54,9 +64,11 @@ class SentimentAnnotator():
 		if model=="polarity":
 			values = [self.annotateDiscreteLiu(word) for word in words]
 		elif model=="valence":
-			values = [self.annotateWarriner(word) for word in words]
-		elif model=="anew":
-			values = [self.annotateAnew(word) for word in words]
+			values = [self.annotateWarrinerValence(word) for word in words]
+		elif model=="arousal":
+			values = [self.annotateWarrinerArousal(word) for word in words]
+		elif model=="concreteness":
+			values = [self.annotateConcrete(word) for word in words]
 		else: # default
 			values = [self.annotateDiscreteLiu(word) for word in words]
 		return values
