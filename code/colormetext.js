@@ -1,4 +1,4 @@
-
+/*
 function findAllIndices(string, character) {
 	var indices = [];
 	for(var i=0; i<string.length;i++) {
@@ -9,6 +9,13 @@ function findAllIndices(string, character) {
 	return indices;
 }
 
+String.prototype.insert = function (index, string) {
+  if (index > 0)
+    return this.substring(0, index) + string + this.substring(index, this.length);
+  else
+    return string + this;
+};
+*/
 function colorer(){
 	var option = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
@@ -26,7 +33,7 @@ function colorer(){
 	  success: function(response){
         	alert(response.message);
         //alert(response.keys);
-        var lineBreakIndices = findAllIndices(input, "h");
+        //var lineBreakIndices = findAllIndices(input, 'h');
         var words = input.split(" ");
 		//var colors = o;
 		var colors = response.colors;
@@ -34,14 +41,20 @@ function colorer(){
 		for (var i=0; i<words.length; i++) {
 			coloredWords[i] = '<span style="color:' + colors[i] + '">' + words[i] + '</span>';
 		}
-		for (var i=0; i < lineBreakIndices.length; i++) {
-			var thisIndex = lineBreakIndices[i];
-			coloredWords.splice(thisIndex, 0, '</br>');
-		}
+		
 		var coloredStr = "";
 		for (var i=0; i<coloredWords.length; i++) {
 			coloredStr = coloredStr + " " + coloredWords[i];
 		}
+		/*
+
+		for (var i=0; i < lineBreakIndices.length; i++) {
+			var thisIndex = lineBreakIndices[i];
+			coloredStr = coloredStr.slice(0, thisIndex) + '</br>' + coloredStr.slice(thisIndex);
+			//txt1.slice(0, 3) + "bar" + txt1.slice(3);
+			coloredStr.insert(thisIndex, '</br>');
+		}
+		*/
 		$("#output").html(coloredStr);
 		
        }
