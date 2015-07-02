@@ -1,4 +1,13 @@
 
+function findAllIndices(string, character) {
+	var indices = [];
+	for(var i=0; i<str.length;i++) {
+    	if (string[i] === "character") {
+    		indices.push(i);
+		}
+	}
+	return indices;
+}
 
 function colorer(){
 	var option = document.getElementById("dictionary").value;
@@ -17,15 +26,23 @@ function colorer(){
 	  success: function(response){
         	alert(response.message);
         //alert(response.keys);
-        
+        var lineBreakIndices = findAllIndices(input, '\n');
         var words = input.split(" ");
 		//var colors = o;
 		var colors = response.colors;
-		var coloredWords = "";	
+		var coloredWords = [];	
 		for (var i=0; i<words.length; i++) {
-			coloredWords = coloredWords + '<span style="color:' + colors[i] + '">' + words[i] + ' ' + '</span>';
+			coloredWords[i] = '<span style="color:' + colors[i] + '">' + words[i] + ' ' + '</span>';
 		}
-		$("#output").html(coloredWords);
+		for (var i=0; i < lineBreakIndices.length; i++) {
+			var thisIndex = lineBreakIndices[i];
+			coloredWords.splice(thisIndex, 0, '</br>');
+		}
+		var coloredStr = "";
+		for (var i=0; i<coloredWords.length; i++) {
+			coloredStr = coloredStr + coloredWords[i];
+		}
+		$("#output").html(coloredStr);
 		
        }
    });
