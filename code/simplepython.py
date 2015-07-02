@@ -110,7 +110,7 @@ result['message'] = ",".join(colorPicker(myAnnotator.annotate(d['param'], "anyth
 #d['param'].upper() 
 
 
-result['data'] = d
+result['colors'] = colorPicker(myAnnotator.annotate(d['param'], "anything"))
 
 sys.stdout.write(json.dumps(result,indent=1))
 sys.stdout.write("\n")
