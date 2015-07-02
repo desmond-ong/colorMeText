@@ -9,6 +9,13 @@ function findAllIndices(string, character) {
 	return indices;
 }
 
+String.prototype.insert = function (index, string) {
+  if (index > 0)
+    return this.substring(0, index) + string + this.substring(index, this.length);
+  else
+    return string + this;
+};
+
 function colorer(){
 	var option = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
@@ -42,7 +49,7 @@ function colorer(){
 
 		for (var i=0; i < lineBreakIndices.length; i++) {
 			var thisIndex = lineBreakIndices[i];
-			coloredStr.splice(thisIndex, 0, '</br>');
+			coloredStr.insert(thisIndex, '</br>');
 		}
 		$("#output").html(coloredStr);
 		
