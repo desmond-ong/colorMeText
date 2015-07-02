@@ -72,7 +72,7 @@ def colorPicker(scores):
 		elif score <= 4 and score > 3:
 			colors.append("red")
 		elif score <= 3 and score > 2:
-			colors.append("mediumred")
+			colors.append("#800000")
 		elif score <= 2 and score >= 1:
 			colors.append("darkred")
 		elif score < 6 and score > 5:
