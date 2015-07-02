@@ -57,14 +57,10 @@ function colorer(){
 		var c  = document.getElementsByTagName('canvas')[0];
 		var ctx = c.getContext("2d");
 
-		for(var i =1; i<=6;i++)
-		{
-			var tyPoint = yPoint * i;
-			for(var j=1;j<=6;j++)
-			{
-				var txPoint = xPoint * j;  
-				var colorcode = "red";
-
+		for(var i=0; i < coloredWords.length; i++) {
+			var tyPoint = yPoint;
+			var txPoint = xPoint * i;
+			var colorCode = colors[i];
 
 				ctx.beginPath();
 				ctx.fillStyle = colorcode ;      
@@ -72,7 +68,6 @@ function colorer(){
 				ctx.fill();
 				ctx.stroke();
 				ctx.closePath();
-			}
 
 		}
 
