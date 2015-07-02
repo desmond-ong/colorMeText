@@ -1,7 +1,7 @@
 
 function findAllIndices(string, character) {
 	var indices = [];
-	for(var i=0; i<str.length;i++) {
+	for(var i=0; i<string.length;i++) {
     	if (string[i] === "character") {
     		indices.push(i);
 		}
