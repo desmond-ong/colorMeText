@@ -1,7 +1,7 @@
 
 
 function colorer(){
-	//	  var dictionary = document.getElementById("dictionary").value;
+	var option = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
 	//pico.load("simplepython");
 	//simplepython.returnColors(input, function(response){
@@ -11,22 +11,22 @@ function colorer(){
 	$.ajax({
 	  type: "POST",
 	  //crossDomain : true,
-	  url: "simplepython.py",
-	  data: { param: input},
+	  url: "code/simplepython.py",
+	  data: { param: input, lexicon: option},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
-        alert(response.message);
+        	alert(response.message);
         //alert(response.keys);
-        /*
-        var words = response.message.split(" ");
+        
+        var words = input.split(" ");
 		//var colors = o;
-		var colors = ["blue", "green"];
+		var colors = response.colors;
 		var coloredWords = "";	
 		for (var i=0; i<words.length; i++) {
 			coloredWords = coloredWords + '<span style="color:' + colors[i] + '">' + words[i] + ' ' + '</span>';
 		}
 		$("#output").html(coloredWords);
-		*/
+		
        }
    });
 
