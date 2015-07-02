@@ -42,7 +42,7 @@ function colorer(){
 		for (var i=0; i<coloredWords.length; i++) {
 			coloredStr = coloredStr + " " + coloredWords[i];
 		}
-		$("#output").html(lineBreakIndices);
+		$("#output").html(coloredStr);
 		
        }
    });
