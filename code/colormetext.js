@@ -53,8 +53,8 @@ function colorer(){
 			coloredStr = coloredStr + " " + coloredWords[i];
 		}
 		
-		var xPoint = 3;
-		var yPoint = 0;
+		var xPoint = 30;
+		var yPoint = 20;
 
 		var c  = document.getElementsByTagName('canvas')[0];
 		var ctx = c.getContext("2d");
@@ -66,7 +66,7 @@ function colorer(){
 
 				ctx.beginPath();
 				ctx.fillStyle = colorCode;      
-				ctx.rect(0, 0, txPoint , tyPoint );
+				ctx.rect(txPoint, tyPoint, 30 , 20);
 				ctx.fill();
 				ctx.stroke();
 				ctx.closePath();
