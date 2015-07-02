@@ -1,5 +1,4 @@
 body {
-    background-image: url("seamless_paper_texture.png");
     background-color: #cccccc;
     background: #efeee6;
     
@@ -13,7 +12,6 @@ body {
   }
 
   body {
-    background-image: url("seamless_paper_texture.png");
     
     margin: 25px;
     padding: 5px;
