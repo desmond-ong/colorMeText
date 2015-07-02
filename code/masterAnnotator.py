@@ -52,7 +52,7 @@ class SentimentAnnotator():
 
 	# scale from 1-5 to 1-9
 	def annotateConcrete(self, word):
-		if word in self.concreteness:
+		if word.lower in self.concreteness:
 			return ((self.concreteness[word]-1)*2 + 1)
 		else:
 			return 0
@@ -62,15 +62,15 @@ class SentimentAnnotator():
 	def annotate(self, sentence, model="liu"):
 		words = sentence.split()
 		if model=="polarity":
-			values = [self.annotateDiscreteLiu(word) for word in words]
+			values = [self.annotateDiscreteLiu(word.lower().strip()) for word in words]
 		elif model=="valence":
-			values = [self.annotateWarrinerValence(word) for word in words]
+			values = [self.annotateWarrinerValence(word.lower().strip()) for word in words]
 		elif model=="arousal":
-			values = [self.annotateWarrinerArousal(word) for word in words]
+			values = [self.annotateWarrinerArousal(word.lower().strip()) for word in words]
 		elif model=="concreteness":
-			values = [self.annotateConcrete(word) for word in words]
+			values = [self.annotateConcrete(word.lower().strip()) for word in words]
 		else: # default
-			values = [self.annotateDiscreteLiu(word) for word in words]
+			values = [self.annotateDiscreteLiu(word.lower().strip()) for word in words]
 		return values
 
 
