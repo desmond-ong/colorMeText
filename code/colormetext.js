@@ -1,7 +1,7 @@
 
 
 function colorer(){
-	//	  var dictionary = document.getElementById("dictionary").value;
+	var option = document.getElementById("dictionary").value;
 	var input = document.getElementById("input").value;
 	//pico.load("simplepython");
 	//simplepython.returnColors(input, function(response){
@@ -12,10 +12,10 @@ function colorer(){
 	  type: "POST",
 	  //crossDomain : true,
 	  url: "simplepython.py",
-	  data: { param: input},
+	  data: { param: input, lexicon: option},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
-        alert(response.message);
+        //alert(response.message);
         //alert(response.keys);
         
         var words = input.split(" ");
