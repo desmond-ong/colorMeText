@@ -39,7 +39,7 @@ function colorer(){
 		var colors = response.colors;
 		var coloredWords = [];	
 		for (var i=0; i<words.length; i++) {
-			coloredWords[i] = '<span style="color:' + colors[i] + '">' + words[i] + '</span>';
+			coloredWords[i] = '<span style="background-color:' + colors[i] + '">' + words[i] + '</span>';
 		}
 		
 		var coloredStr = "";
