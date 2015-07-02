@@ -51,9 +51,9 @@ class SentimentAnnotator():
 	# This is the function that should be called externally
 	def annotate(self, sentence, model="liu"):
 		words = sentence.split()
-		if model=="liu":
+		if model=="polarity":
 			values = [self.annotateDiscreteLiu(word) for word in words]
-		elif model=="warriner":
+		elif model=="valence":
 			values = [self.annotateWarriner(word) for word in words]
 		elif model=="anew":
 			values = [self.annotateAnew(word) for word in words]
@@ -102,13 +102,13 @@ d = {}
 for k in fs.keys():
     d[k] = fs.getvalue(k)
 
-result['message'] = ",".join(colorPicker(myAnnotator.annotate(d['param'], "anything")))
+result['message'] = ",".join(colorPicker(myAnnotator.annotate(d['param'], d['lexicon'])))
 #result['message'] = d['param']
 #result['message'] = len(colorPicker([4, 6]))
 #d['param'].upper() 
 
 
-result['colors'] = colorPicker(myAnnotator.annotate(d['param'], "anything"))
+result['colors'] = colorPicker(myAnnotator.annotate(d['param'], d['lexicon']))
 
 sys.stdout.write(json.dumps(result,indent=1))
 sys.stdout.write("\n")
