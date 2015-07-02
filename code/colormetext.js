@@ -34,13 +34,15 @@ function colorer(){
 		for (var i=0; i<words.length; i++) {
 			coloredWords[i] = '<span style="color:' + colors[i] + '">' + words[i] + '</span>';
 		}
-		for (var i=0; i < lineBreakIndices.length; i++) {
-			var thisIndex = lineBreakIndices[i];
-			coloredWords.splice(thisIndex, 0, '</br>');
-		}
+		
 		var coloredStr = "";
 		for (var i=0; i<coloredWords.length; i++) {
 			coloredStr = coloredStr + " " + coloredWords[i];
+		}
+
+		for (var i=0; i < lineBreakIndices.length; i++) {
+			var thisIndex = lineBreakIndices[i];
+			coloredStr.splice(thisIndex, 0, '</br>');
 		}
 		$("#output").html(coloredStr);
 		
