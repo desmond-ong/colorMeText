@@ -17,6 +17,8 @@ String.prototype.insert = function (index, string) {
 };
 */
 
+var allColors = ["darkred", "#800000", "red", "#FF5050", "gray", "#3366FF", "blue", "medimublue", "darkblue"];	
+
 
 function colorer(){
 	var option = document.getElementById("dictionary").value;
@@ -51,20 +53,20 @@ function colorer(){
 			coloredStr = coloredStr + " " + coloredWords[i];
 		}
 		
-		var xPoint = 30;
-		var yPoint = 30;
+		var xPoint = 3;
+		var yPoint = 0;
 
 		var c  = document.getElementsByTagName('canvas')[0];
 		var ctx = c.getContext("2d");
 
-		for(var i=0; i < coloredWords.length; i++) {
+		for(var i=0; i < allColors.length; i++) {
 			var tyPoint = yPoint;
-			var txPoint = xPoint * i;
-			var colorCode = colors[i];
+			var txPoint = xPoint * (i + 1);
+			var colorCode = allColors[i];
 
 				ctx.beginPath();
 				ctx.fillStyle = colorCode;      
-				ctx.rect(20, 20, txPoint , tyPoint );
+				ctx.rect(0, 0, txPoint , tyPoint );
 				ctx.fill();
 				ctx.stroke();
 				ctx.closePath();
