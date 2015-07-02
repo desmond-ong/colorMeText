@@ -15,7 +15,7 @@ function colorer(){
 	  data: { param: input, lexicon: option},
 	  //data: {'key':'value','key2':'value2'},
 	  success: function(response){
-        alert(response.message);
+        	alert(response.message);
         //alert(response.keys);
         
         var words = input.split(" ");
