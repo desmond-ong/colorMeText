@@ -49,6 +49,8 @@ function colorer(){
 
 		for (var i=0; i < lineBreakIndices.length; i++) {
 			var thisIndex = lineBreakIndices[i];
+			coloredStr = coloredStr.slice(0, thisIndex) + '</br>' + coloredStr.slice(thisIndex);
+			//txt1.slice(0, 3) + "bar" + txt1.slice(3);
 			coloredStr.insert(thisIndex, '</br>');
 		}
 		$("#output").html(coloredStr);
