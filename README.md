@@ -13,7 +13,7 @@ Initially programmed by Desmond Ong, Justine Kao, and Greg Scontras during our i
 
 ## Details
 
-The program does a simple word-level count. In most cases, we have a dictionary of words that are rated along some dimension, and the program simply does a word lookup, and highlights the words based on their rating along a certain dimension. Unknown words are give a neutral color.
+The program does a simple word-level count. In most cases, we have a dictionary of words that are rated along some dimension, and the program simply does a word lookup, and highlights the words based on their rating along a certain dimension. Unknown words are given a neutral color.
 
 - For Valence and Arousal, we have used the lexicon provided by Warriner et al. 2013, which consists of 13,915 English word lemmas rated on a 1-9 scale for Valence, Arousal, and Dominance. We did not use the Dominance dimension.
   - Other similar sentiment lexica that can be implemented: 
